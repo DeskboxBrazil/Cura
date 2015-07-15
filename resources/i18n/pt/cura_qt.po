@@ -45,25 +45,25 @@ msgstr "Fechar"
 #: ../resources/qml/Actions.qml:37
 msgctxt "Actions|"
 msgid "&Undo"
-msgstr ""
+msgstr "&Desfazer"
 
 #. Redo action
 #: ../resources/qml/Actions.qml:45
 msgctxt "Actions|"
 msgid "&Redo"
-msgstr ""
+msgstr "&Refazer"
 
 #. Quit action
 #: ../resources/qml/Actions.qml:53
 msgctxt "Actions|"
 msgid "&Quit"
-msgstr ""
+msgstr "&Sair"
 
 #. Preferences action
 #: ../resources/qml/Actions.qml:61
 msgctxt "Actions|"
 msgid "&Preferences..."
-msgstr ""
+msgstr "&Preferências..."
 
 #. Add Printer action
 #: ../resources/qml/Actions.qml:68
@@ -81,7 +81,7 @@ msgstr "&Configurar Impressoras"
 #: ../resources/qml/Actions.qml:81
 msgctxt "Actions|"
 msgid "Show Online &Documentation"
-msgstr ""
+msgstr "Mostrar Documentação &Online"
 
 #. Report a Bug Action
 #: ../resources/qml/Actions.qml:89
@@ -123,7 +123,7 @@ msgstr "Duplicar Objeto"
 #: ../resources/qml/Actions.qml:130
 msgctxt "Actions|"
 msgid "Split Object into Parts"
-msgstr ""
+msgstr "Dividir um Objeto em Partes"
 
 #. Clear build platform action
 #: ../resources/qml/Actions.qml:137
@@ -154,7 +154,7 @@ msgstr "Redefinir Todas as Transformações de Objetos "
 #: ../resources/qml/Actions.qml:162
 msgctxt "Actions|"
 msgid "&Open..."
-msgstr ""
+msgstr "&Abrir"
 
 #. Save file action
 #: ../resources/qml/Actions.qml:170
@@ -182,19 +182,19 @@ msgstr "Adicionar Impressora"
 #: ../resources/qml/AddMachineWizard.qml:25
 msgctxt "AddMachineWizard|"
 msgid "Please select the type of printer:"
-msgstr ""
+msgstr "Por favor selecione o tipo de impressora:"
 
 #. Add Printer wizard field label
 #: ../resources/qml/AddMachineWizard.qml:40
 msgctxt "AddMachineWizard|"
 msgid "Printer Name:"
-msgstr ""
+msgstr "Nome da Impressora:"
 
 #. Add Printer wizarad button
 #: ../resources/qml/AddMachineWizard.qml:53
 msgctxt "AddMachineWizard|"
 msgid "Next"
-msgstr ""
+msgstr "Próximo"
 
 #. Add Printer wizarad button
 #: ../resources/qml/AddMachineWizard.qml:63
@@ -207,7 +207,7 @@ msgstr "Cancelar"
 #, qt-format
 msgctxt "ControlWindow|"
 msgid "Extruder Temperature %1"
-msgstr ""
+msgstr "Temperatura Extrusor %1"
 
 #. USB Printing dialog label, %1 is bed temperature
 #: ../plugins/USBPrinting/ControlWindow.qml:20
@@ -220,7 +220,7 @@ msgstr "Temperatura da Cama %1"
 #: ../plugins/USBPrinting/ControlWindow.qml:33
 msgctxt "ControlWindow|"
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 #. USB Printing dialog cancel print button
 #: ../plugins/USBPrinting/ControlWindow.qml:40
@@ -238,7 +238,7 @@ msgstr "Cura"
 #: ../resources/qml/Cura.qml:26
 msgctxt "Cura|"
 msgid "&File"
-msgstr ""
+msgstr "&Arquivo"
 
 #. Edit menu
 #: ../resources/qml/Cura.qml:38
@@ -250,13 +250,13 @@ msgstr "&Editar"
 #: ../resources/qml/Cura.qml:50
 msgctxt "Cura|"
 msgid "&Machine"
-msgstr ""
+msgstr "&Máquina"
 
 #. Extensions menu
 #: ../resources/qml/Cura.qml:76
 msgctxt "Cura|"
 msgid "E&xtensions"
-msgstr ""
+msgstr "E&xtensões"
 
 #. Settings menu
 #: ../resources/qml/Cura.qml:107
@@ -268,25 +268,25 @@ msgstr "&Configurações"
 #: ../resources/qml/Cura.qml:114
 msgctxt "Cura|"
 msgid "&Help"
-msgstr ""
+msgstr "&Ajuda"
 
 #. View Mode toolbar button
 #: ../resources/qml/Cura.qml:231
 msgctxt "Cura|"
 msgid "View Mode"
-msgstr ""
+msgstr "Modo de Visualização"
 
 #. View preferences page title
 #: ../resources/qml/Cura.qml:273
 msgctxt "Cura|"
 msgid "View"
-msgstr ""
+msgstr "Visualizar"
 
 #. File open dialog title
 #: ../resources/qml/Cura.qml:370
 msgctxt "Cura|"
 msgid "Open File"
-msgstr ""
+msgstr "Abrir Arquivo"
 
 #. File save dialog title
 #: ../resources/qml/Cura.qml:386
@@ -298,7 +298,7 @@ msgstr "Salvar Arquivo"
 #: ../resources/qml/EngineLog.qml:11
 msgctxt "EngineLog|"
 msgid "Engine Log"
-msgstr ""
+msgstr "Registro do Motor"
 
 #. Close engine log button
 #: ../resources/qml/EngineLog.qml:30
@@ -310,19 +310,19 @@ msgstr "Fechar"
 #: ../plugins/USBPrinting/FirmwareUpdateWindow.qml:16
 msgctxt "FirmwareUpdateWindow|"
 msgid "Starting firmware update, this may take a while."
-msgstr ""
+msgstr "Iniciando atualização de firmware, pode demorar."
 
 #. Firmware update status label
 #: ../plugins/USBPrinting/FirmwareUpdateWindow.qml:21
 msgctxt "FirmwareUpdateWindow|"
 msgid "Firmware update completed."
-msgstr ""
+msgstr "Atualização de firmware completa."
 
 #. Firmware update status label
 #: ../plugins/USBPrinting/FirmwareUpdateWindow.qml:26
 msgctxt "FirmwareUpdateWindow|"
 msgid "Updating firmware."
-msgstr ""
+msgstr "Atualizando firmware."
 
 #. Print material amount save button label
 #: ../resources/qml/SaveButton.qml:149
@@ -335,7 +335,7 @@ msgstr "material %1m"
 #: ../resources/qml/SaveButton.qml:191
 msgctxt "SaveButton|"
 msgid "Please load a 3D model"
-msgstr ""
+msgstr "Por favor carregue um modelo 3D"
 
 #. Save button label
 #: ../resources/qml/SaveButton.qml:194
@@ -347,13 +347,13 @@ msgstr "Calculando tempo de impressão"
 #: ../resources/qml/SaveButton.qml:197
 msgctxt "SaveButton|"
 msgid "Estimated Print-time"
-msgstr ""
+msgstr "Tempo Estimado de Impressão"
 
 #. Simple configuration mode option
 #: ../resources/qml/Sidebar.qml:105
 msgctxt "Sidebar|"
 msgid "Simple"
-msgstr ""
+msgstr "Simples"
 
 #. Advanced configuration mode option
 #: ../resources/qml/Sidebar.qml:107
@@ -365,25 +365,25 @@ msgstr "Avançado"
 #: ../resources/qml/SidebarHeader.qml:26
 msgctxt "SidebarHeader|"
 msgid "Mode:"
-msgstr ""
+msgstr "Modo:"
 
 #. Machine selection label
 #: ../resources/qml/SidebarHeader.qml:70
 msgctxt "SidebarHeader|"
 msgid "Machine:"
-msgstr ""
+msgstr "Máquina:"
 
 #. Sidebar header label
 #: ../resources/qml/SidebarHeader.qml:117
 msgctxt "SidebarHeader|"
 msgid "Print Setup"
-msgstr ""
+msgstr "Configuração de Impressão"
 
 #. Sidebar configuration label
 #: ../resources/qml/SidebarSimple.qml:40
 msgctxt "SidebarSimple|"
 msgid "No Model Loaded"
-msgstr ""
+msgstr "Nenhum Modelo Carregado"
 
 #. Sidebar configuration label
 #: ../resources/qml/SidebarSimple.qml:45
@@ -395,7 +395,7 @@ msgstr "Calculando..."
 #: ../resources/qml/SidebarSimple.qml:50
 msgctxt "SidebarSimple|"
 msgid "Estimated Print Time"
-msgstr ""
+msgstr "Tempo Estimado de Impressão"
 
 #. Quality slider label
 #: ../resources/qml/SidebarSimple.qml:87
@@ -404,6 +404,8 @@ msgid ""
 "Minimum\n"
 "Draft"
 msgstr ""
+"Mínimo\n"
+"Rascunho"
 
 #. Quality slider label
 #: ../resources/qml/SidebarSimple.qml:97
@@ -412,6 +414,8 @@ msgid ""
 "Maximum\n"
 "Quality"
 msgstr ""
+"Qualidade\n"
+"Máxima"
 
 #. Setting checkbox
 #: ../resources/qml/SidebarSimple.qml:109
@@ -423,7 +427,7 @@ msgstr "Habilitar Suporte"
 #: ../resources/qml/ViewPage.qml:9
 msgctxt "ViewPage|"
 msgid "View"
-msgstr ""
+msgstr "Visualizar"
 
 #. Display Overhang preference checkbox
 #: ../resources/qml/ViewPage.qml:24
