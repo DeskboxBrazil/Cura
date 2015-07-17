@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Uranium json setting files\n"
 "Report-Msgid-Bugs-To: http://github.com/ultimaker/uranium\n"
 "POT-Creation-Date: 2015-07-15 20:48-0300\n"
-"PO-Revision-Date: 2015-07-15 20:49-0300\n"
+"PO-Revision-Date: 2015-07-17 01:02-0300\n"
 "Last-Translator: Martin Elsner Ramos <martin.elsner@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -163,7 +163,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "top_bottom_thickness label"
 msgid "Bottom/Top Thickness"
-msgstr ""
+msgstr "Espessura Fundo/Topo"
 
 #: fdmprinter.json
 msgctxt "top_bottom_thickness description"
@@ -201,7 +201,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "bottom_thickness label"
 msgid "Bottom Thickness"
-msgstr ""
+msgstr "Espessura do Fundo"
 
 #: fdmprinter.json
 msgctxt "bottom_thickness description"
@@ -215,7 +215,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "bottom_layers label"
 msgid "Bottom Layers"
-msgstr ""
+msgstr "Camadas do Fundo"
 
 #: fdmprinter.json
 msgctxt "bottom_layers description"
@@ -225,7 +225,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "wall_overlap_avoid_enabled label"
 msgid "Avoid Overlapping Walls"
-msgstr ""
+msgstr "Evitar Sobreposição de Paredes"
 
 #: fdmprinter.json
 msgctxt "wall_overlap_avoid_enabled description"
@@ -238,7 +238,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "top_bottom_pattern label"
 msgid "Bottom/Top Pattern"
-msgstr ""
+msgstr "Padrão Fundo/Topo"
 
 #: fdmprinter.json
 msgctxt "top_bottom_pattern description"
@@ -272,6 +272,9 @@ msgid ""
 "compensate for too big holes; negative values can compensate for too small "
 "holes."
 msgstr ""
+"Quantidade de deslocamento aplicado a cada polígono em cada camada. Um valor "
+"positivo compensa furos grandes; um valor negativo compensa furos mais "
+"pequenos."
 
 #: fdmprinter.json
 msgctxt "material label"
@@ -294,7 +297,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "material_bed_temperature label"
 msgid "Bed Temperature"
-msgstr ""
+msgstr "Temperatura da Mesa"
 
 #: fdmprinter.json
 msgctxt "material_bed_temperature description"
@@ -306,7 +309,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "material_diameter label"
 msgid "Diameter"
-msgstr ""
+msgstr "Diâmetro"
 
 #: fdmprinter.json
 msgctxt "material_diameter description"
@@ -413,6 +416,10 @@ msgid ""
 "retraction. If combing is disabled the printer head moves straight from the "
 "start point to the end point and it will always retract."
 msgstr ""
+"O penteio mantém o cabeçote dentro da área de impressão sempre que possível "
+"ao se trasladar de uma parte do objeto a outra, sem utilizar a função de "
+"retração. Se o penteio estiver desabilitado, o cabeçote se move diretamente "
+"do ponto inicial ao final, se retraindo sempre."
 
 #: fdmprinter.json
 msgctxt "retraction_minimal_extrusion label"
@@ -552,7 +559,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "speed_layer_0 label"
 msgid "Bottom Layer Speed"
-msgstr ""
+msgstr "Velocidade da Camada do Fundo"
 
 #: fdmprinter.json
 msgctxt "speed_layer_0 description"
@@ -577,7 +584,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "speed_slowdown_layers label"
 msgid "Amount of Slower Layers"
-msgstr ""
+msgstr "Quantidade de Camadas Lentas"
 
 #: fdmprinter.json
 msgctxt "speed_slowdown_layers description"
@@ -612,6 +619,10 @@ msgctxt "fill_pattern label"
 msgid "Infill Pattern"
 msgstr ""
 
+# quadriculado ou hachurado?
+# cross-hatching é isto:
+# http://www.udel.edu/artfoundations/drawing/crosshatch.html
+# https://pt.wikipedia.org/wiki/Hachura
 #: fdmprinter.json
 msgctxt "fill_pattern description"
 msgid ""
@@ -620,6 +631,10 @@ msgid ""
 "direction on alternate layers of infill, while the grid prints the full "
 "cross-hatching on each layer of infill."
 msgstr ""
+"Por padrão, o Cura alterna entre grade e enchimento de linha. Mas com esta "
+"configuração você pode controlar isso. O enchimento de linha vira a direção "
+"em camadas alternadas de enchimento, enquanto que a grade imprime o "
+"quadriculado completo em cada camada de enchimento."
 
 #: fdmprinter.json
 msgctxt "infill_line_distance label"
@@ -629,7 +644,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "infill_line_distance description"
 msgid "Distance between the printed infill lines."
-msgstr ""
+msgstr "Distância entre as linhas de enchimento impressas."
 
 #: fdmprinter.json
 msgctxt "fill_overlap label"
@@ -665,11 +680,12 @@ msgstr ""
 msgctxt "fill_sparse_combine description"
 msgid "Amount of layers that are combined together to form sparse infill."
 msgstr ""
+"Quantidade de camadas que são combinadas para formar um enchimento esparso."
 
 #: fdmprinter.json
 msgctxt "cooling label"
 msgid "Cooling"
-msgstr ""
+msgstr "Resfriamento"
 
 #: fdmprinter.json
 msgctxt "cool_fan_enabled label"
@@ -874,17 +890,17 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "support_top_distance description"
 msgid "Distance from the top of the support to the print."
-msgstr ""
+msgstr "Distância do tipo até o suporte do objeto."
 
 #: fdmprinter.json
 msgctxt "support_bottom_distance label"
 msgid "Bottom Distance"
-msgstr ""
+msgstr "Distância do Fundo"
 
 #: fdmprinter.json
 msgctxt "support_bottom_distance description"
 msgid "Distance from the print to the bottom of the support."
-msgstr ""
+msgstr "Distância do objeto até o fundo do suporte."
 
 #: fdmprinter.json
 msgctxt "support_bottom_stair_step_height label"
@@ -914,7 +930,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "support_area_smoothing label"
 msgid "Area Smoothing"
-msgstr ""
+msgstr "Suavização de Área"
 
 #: fdmprinter.json
 msgctxt "support_area_smoothing description"
@@ -986,11 +1002,16 @@ msgid ""
 "line. The third is a structure in between the other two; it consists of "
 "lines which are connected in an accordeon fashion."
 msgstr ""
+"O Cura suporta 3 tipos diferentes de estrutura de suporte. O primeiro é uma "
+"estrutura de suporte baseada em grade que é muito sólida e pode ser retirada "
+"como uma peça só. A segunda é uma estrutura de suporte que tem que ser "
+"descascada linha por linha. O terceiro é uma estrutura intermediária dessas "
+"duas; consiste em linhas que estão conectadas em formato de acordeão."
 
 #: fdmprinter.json
 msgctxt "support_connect_zigzags label"
 msgid "Connect ZigZags"
-msgstr ""
+msgstr "Conectar Zigue-zagues"
 
 #: fdmprinter.json
 msgctxt "support_connect_zigzags description"
@@ -998,6 +1019,8 @@ msgid ""
 "Connect the ZigZags. Makes them harder to remove, but prevents stringing of "
 "disconnected zigzags."
 msgstr ""
+"Conecta os zigue-zagues. Eles ficam mais difíceis de serem removidos, mas "
+"isso evita a formação de zig-zags desconexos."
 
 #: fdmprinter.json
 msgctxt "support_fill_rate label"
@@ -1019,7 +1042,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "support_line_distance description"
 msgid "Distance between the printed support lines."
-msgstr ""
+msgstr "Distância entre as linhas de suporte impressas."
 
 #: fdmprinter.json
 msgctxt "platform_adhesion label"
@@ -1040,6 +1063,12 @@ msgid ""
 "thick grid below the object and a thin interface between this and your "
 "object. (Note that enabling the brim or raft disables the skirt.)"
 msgstr ""
+"Diferentes opções que ajudam a evitar que os cantos do modelo se levantem "
+"enquanto se está imprimindo. A borda adiciona uma camada plana de material "
+"ao redor do objeto, que pode ser cortada depois, e é a opção recomendada. A "
+"balsa adiciona uma quadrícula grossa abaixo do objeto e uma fina ligação "
+"entre ela e seu objeto. (Veja que ao habilitar a borda ou a balsa, estará "
+"desabilitando a saia)."
 
 #: fdmprinter.json
 msgctxt "skirt_line_count label"
@@ -1084,7 +1113,7 @@ msgstr ""
 #: fdmprinter.json
 msgctxt "brim_line_count label"
 msgid "Brim Line Count"
-msgstr ""
+msgstr "Número de Linhas da Borda"
 
 #: fdmprinter.json
 msgctxt "brim_line_count description"
@@ -1337,6 +1366,8 @@ msgid ""
 "Delay time after an upward move, so that the upward line can harden. Only "
 "applies to Wire Printing."
 msgstr ""
+"Tempo de atraso depois de um movimento ascendente, de forma que a linha "
+"ascendente possa endurecer. Só se aplica a impressão em arame."
 
 #: fdmprinter.json
 msgctxt "wireframe_bottom_delay label"
@@ -1349,6 +1380,8 @@ msgid ""
 "Delay time after a downward move. Only applies to Wire Printing. Only "
 "applies to Wire Printing."
 msgstr ""
+"Tempo de atraso depois de um movimento descendente. Só se aplica a impressão "
+"em arame."
 
 #: fdmprinter.json
 msgctxt "wireframe_flat_delay label"
@@ -1362,6 +1395,10 @@ msgid ""
 "cause better adhesion to previous layers at the connection points, while too "
 "large delay times cause sagging. Only applies to Wire Printing."
 msgstr ""
+"Tempo de atraso entre dois segmentos horizontais. Introduzir esse atraso "
+"pode favorecer uma melhor aderência às camadas prévias nos pontos de "
+"conexão, enquanto que um atraso muito longo pode causar flacidez. Só se "
+"aplica a impressão em arame."
 
 #: fdmprinter.json
 msgctxt "wireframe_up_half_speed label"
@@ -1388,6 +1425,9 @@ msgid ""
 "horizontal layer has a better chance to connect to it. Only applies to Wire "
 "Printing."
 msgstr ""
+"Cria um pequeno nó no topo de uma linha ascendente, de forma que a camada "
+"horizontal seguinte tem uma maior chance de se conectar a ela. Só se aplica "
+"à impressão em arame."
 
 #: fdmprinter.json
 msgctxt "wireframe_fall_down label"
@@ -1519,3 +1559,7 @@ msgid ""
 "which in turn results in less upward connections with the next layer. Only "
 "applies to Wire Printing."
 msgstr ""
+"Distância entre o bico e as linhas horizontalmente descendentes. Um "
+"espaçamento maior resultará em linhas diagonais descendentes com um ângulo "
+"menos pronunciado, que por sua vez produzirá menos conexões ascendentes com "
+"a próxima camada. Só se aplica à impressão em arame."
