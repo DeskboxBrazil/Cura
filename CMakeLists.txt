@@ -26,6 +26,7 @@ if(NOT ${URANIUM_SCRIPTS_DIR} STREQUAL "")
         #TODO: Properly install the built files. This should be done after we move the applications out of the Uranium repo.
         set(languages
             en
+            pt
             x-test
             ru
             fr
@@ -67,4 +68,3 @@ if(NOT APPLE AND NOT WIN32)
 else()
     install(DIRECTORY cura DESTINATION lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages)
 endif()
-
