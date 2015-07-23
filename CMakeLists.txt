@@ -9,7 +9,7 @@ if(NOT ${URANIUM_SCRIPTS_DIR} STREQUAL "")
     add_custom_target(extract-messages ${URANIUM_SCRIPTS_DIR}/extract-messages ${CMAKE_SOURCE_DIR} cura)
 
     # Build Translations
-    find_package(Gettext)
+    find_package(Gettext REQUIRED)
     include(${URANIUM_SCRIPTS_DIR}/ECMPoQmTools.cmake)
 
     if(GETTEXT_FOUND)
