@@ -17,21 +17,22 @@ msgstr ""
 #: ../resources/qml/AboutDialog.qml:12
 msgctxt "AboutDialog|"
 msgid "About Cura"
-msgstr "Sobre o Cura"
+msgstr "Sobre o Deskbox"
 
 #. About dialog application description
 #: ../resources/qml/AboutDialog.qml:42
 msgctxt "AboutDialog|"
 msgid "End-to-end solution for fused filament 3D printing."
-msgstr "Solução completa para impressão 3D FDM."
+msgstr ""
+"Solução para impressão 3D FDM,\n"
+"baseado no software open source Cura."
 
+# Deixado em branco intencionalmente.
 #. About dialog application author note
 #: ../resources/qml/AboutDialog.qml:47
 msgctxt "AboutDialog|"
 msgid "Cura has been developed by Ultimaker B.V. in cooperation with the community."
-msgstr ""
-"Cura foi desenvolvido por Ultimaker B.V. em cooperação com a comunidade.\n"
-"Adaptado por Deskbox Brazil."
+msgstr " "
 
 #. Close about dialog button
 #: ../resources/qml/AboutDialog.qml:58
