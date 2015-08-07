@@ -229,7 +229,7 @@ msgstr "Cancelar"
 #: ../resources/qml/Cura.qml:14
 msgctxt "Cura|"
 msgid "Cura"
-msgstr "Cura"
+msgstr "Deskbox"
 
 #. File menu
 #: ../resources/qml/Cura.qml:26
