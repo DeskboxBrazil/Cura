@@ -65,38 +65,38 @@ UM.MainWindow {
                 MenuItem { action: actions.deleteAll; }
             }
 
-            Menu {
-                id: machineMenu;
-                //: Machine menu
-                title: qsTr("&Machine");
-
-                Instantiator {
-                    model: UM.Models.machinesModel
-                    MenuItem {
-                        text: model.name;
-                        checkable: true;
-                        checked: model.active;
-                        exclusiveGroup: machineMenuGroup;
-                        onTriggered: UM.Models.machinesModel.setActive(index)
-                    }
-                    onObjectAdded: machineMenu.insertItem(index, object)
-                    onObjectRemoved: machineMenu.removeItem(object)
-                }
-
-                ExclusiveGroup { id: machineMenuGroup; }
-
-                MenuSeparator { }
-
-                MenuItem { action: actions.addMachine; }
-                MenuItem { action: actions.configureMachines; }
-            }
+            // Menu {
+            //     id: machineMenu;
+            //     //: Machine menu
+            //     title: qsTr("&Machine");
+            //
+            //     Instantiator {
+            //         model: UM.Models.machinesModel
+            //         MenuItem {
+            //             text: model.name;
+            //             checkable: true;
+            //             checked: model.active;
+            //             exclusiveGroup: machineMenuGroup;
+            //             onTriggered: UM.Models.machinesModel.setActive(index)
+            //         }
+            //         onObjectAdded: machineMenu.insertItem(index, object)
+            //         onObjectRemoved: machineMenu.removeItem(object)
+            //     }
+            //
+            //     ExclusiveGroup { id: machineMenuGroup; }
+            //
+            //     MenuSeparator { }
+            //
+            //     MenuItem { action: actions.addMachine; }
+            //     MenuItem { action: actions.configureMachines; }
+            // }
 
             Menu {
                 id: extension_menu
                 //: Extensions menu
                 title: qsTr("E&xtensions");
 
-                Instantiator 
+                Instantiator
                 {
                     model: UM.Models.extensionModel
 
@@ -453,4 +453,3 @@ UM.MainWindow {
 
     Component.onCompleted: UM.Theme.load(UM.Resources.getPath(UM.Resources.ThemesLocation, "cura"))
 }
-
