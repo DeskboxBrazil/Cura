@@ -9,6 +9,6 @@ try:
     app = cura.CuraApplication.CuraApplication.getInstance()
     app.run()
 except Exception as e:
+    raise
     import cura.CrashHandler
     cura.CrashHandler.show()
-

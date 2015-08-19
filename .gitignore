@@ -1,4 +1,6 @@
 .DS_Store
+.python
+.vagrant
 *.pyc
 *kdev*
 __pycache__
@@ -12,3 +14,5 @@ build
 resources/i18n/en
 resources/i18n/x-test
 tags
+Arcus
+UM
