@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "sharlak/debian_stretch_64"
+  config.vm.box = "debian/jessie64"
 
   # Salt will use this hostname to determine the states to run.
   config.vm.hostname = "cura"
