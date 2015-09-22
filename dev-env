@@ -1,0 +1,2 @@
+#!/usr/bin/sh -e
+nix-shell --command './dev-env-provision.sh; source .python/bin/activate; return' --packages python34 python34Packages.ipython python34Packages.pyqt5 python34Packages.pyqtgraph python34Packages.pyserial python34Packages.virtualenv qtcreator
