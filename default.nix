@@ -24,9 +24,11 @@ buildPythonPackage {
     shellHook = ''
         unset http_proxy
         export GIT_SSL_CAINFO=/etc/ssl/certs/ca-bundle.crt
-        export LD_LIBRARY_PATH="${qt5.declarative}/lib:${qt5.quick1}/lib:${qt5.quickcontrols}/lib"
-        export PYTHONPATH="${python34Packages.numpy}/lib/python3.4/site-packages:${python34Packages.pyqt5}/lib/python3.4/site-packages:${python34Packages.pyserial}/lib/python3.4/site-packages:${python34Packages.sip_4_16}/lib/python3.4/site-packages:$PYTHONPATH"
-        #echo "${protobuf3_0}"
+        export LD_LIBRARY_PATH="${qt5.declarative}/lib:${qt5Full}/lib:${qt5Full}/lib/qt5/qml:${qt5.quick1}/lib:${qt5.quickcontrols}/lib"
+        export PYTHONPATH="${python34Packages.numpy}/lib/python3.4/site-packages:${python34Packages.pyqt5}/lib/python3.4/site-packages:${python34Packages.pyserial}/lib/python3.4/site-packages:${python34Packages.sip_4_16}/lib/python3.4/site-packages"
+        virtualenv-3.4 --system-site-packages .python
+        .python/bin/pip install 'protobuf>=3.0.0a3'
+        source .python/bin/activate
     '';
     # used when building environments
     extraCmds = ''
