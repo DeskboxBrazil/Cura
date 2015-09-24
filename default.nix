@@ -44,9 +44,9 @@ buildPythonPackage {
         mkdir -p $(pwd)/lib
         ln -s ${xlibs.libxcb}/lib/libxcb.so.1 $(pwd)/lib/libX11-xcb.so.1
 
-        #virtualenv-3.4 --system-site-packages .python
-        #.python/bin/pip install 'protobuf>=3.0.0a3'
-        #source .python/bin/activate
+        virtualenv-3.4 --system-site-packages --python=python3.4 .python
+        .python/bin/pip install 'protobuf>=3.0.0a3'
+        source .python/bin/activate
         python cura_app.py
     '';
     # used when building environments
