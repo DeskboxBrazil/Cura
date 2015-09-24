@@ -16,3 +16,5 @@ resources/i18n/x-test
 tags
 Arcus
 UM
+lib
+qmake*
