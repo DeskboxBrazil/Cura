@@ -14,5 +14,6 @@ build
 resources/i18n/en
 resources/i18n/x-test
 tags
+tmp
 Arcus
 UM

@@ -52,7 +52,10 @@ Column {
                         checkable: true;
                         checked: modeMenu.currentIndex == index;
                         exclusiveGroup: modeMenuGroup;
-                        onTriggered: modeMenu.currentIndex = index;
+                        onTriggered: {
+                            modeMenu.currentIndex = index;
+                            UM.Models.machinesModel.reload();
+                        }
                     }
                     onObjectAdded: modeMenu.insertItem(index, object)
                     onObjectRemoved: modeMenu.removeItem(object)
