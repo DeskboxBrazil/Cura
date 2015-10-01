@@ -15,25 +15,25 @@ buildPythonPackage {
         python34Packages.sip_4_16
         python34Packages.virtualenv
         # Other deps
-        mesa
-        mesa_drivers
-        mesa_glu
-        qt5Full
-        qt5.quickcontrols
-        xlibs.libXdamage
-        xlibs.libXfixes
-        xorg_sys_opengl
-        xlibs.libxcb
-        xlibs.libX11
-        xlibs.libxshmfence
-        xlibs.xcbutilkeysyms
+#        mesa
+#        mesa_drivers
+#        mesa_glu
+#        qt5Full
+#        qt5.quickcontrols
+#        xlibs.libXdamage
+#        xlibs.libXfixes
+#        xorg_sys_opengl
+#        xlibs.libxcb
+#        xlibs.libX11
+#        xlibs.libxshmfence
+#        xlibs.xcbutilkeysyms
     ];
     src = null;
     # When used as `nix-shell --pure`
     shellHook = ''
         unset http_proxy
         export GIT_SSL_CAINFO=/etc/ssl/certs/ca-bundle.crt
-        export LD_LIBRARY_PATH="$(pwd)/lib:${qt5Full}/lib:${xorg_sys_opengl}/lib:${mesa}/lib:${mesa_drivers}/lib:${mesa_glu}/lib:${xlibs.libXdamage}/lib:${xlibs.libXfixes}/lib:${xlibs.libxcb}/lib:${xlibs.libX11}/lib:${xlibs.libxshmfence}/lib:${xlibs.xcbutilkeysyms}/lib:${python34}/lib"
+        export LD_LIBRARY_PATH="$(pwd)/lib:${qt5Full}/lib:${python34}/lib:/usr/lib:/lib"
         export QML_IMPORT_PATH="${qt5Full}/lib/qt5/qml:${qt5.quickcontrols}/lib/qt5/qml"
         export QML2_IMPORT_PATH="${qt5Full}/lib/qt5/qml:${qt5.quickcontrols}/lib/qt5/qml"
         export QT_QPA_PLATFORM_PLUGIN_PATH="${qt5Full}/lib/qt5/plugins/platforms"
