@@ -68,3 +68,9 @@ if(NOT APPLE AND NOT WIN32)
 else()
     install(DIRECTORY cura DESTINATION lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages)
 endif()
+
+# Use this target to regenerate the .pot files
+add_custom_target(
+    update_pot
+    COMMAND xgettext -C --qt --keyword=qsTr --keyword=QT_TR_NOOP -o ${CMAKE_CURRENT_SOURCE_DIR}/resources/i18n/cura_qt.pot ${CMAKE_CURRENT_SOURCE_DIR}/resources/qml/*.qml
+)
