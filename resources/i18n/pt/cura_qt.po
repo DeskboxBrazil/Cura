@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-02 15:31-0300\n"
+"POT-Creation-Date: 2015-10-02 15:54-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Elsner Ramos <martin.elsner@gmail.com>\n"
 "Language-Team: \n"
@@ -25,7 +25,7 @@ msgstr "Solução completa para impressão 3D de fusão filamentar."
 # Deixado em branco intencionalmente.
 #: /home/martin/programming/deskbox/Cura/resources/qml/AboutDialog.qml:58
 msgid "Cura has been developed by Ultimaker B.V. in cooperation with the community."
-msgstr ""
+msgstr " "
 
 #: /home/martin/programming/deskbox/Cura/resources/qml/AboutDialog.qml:65
 #: /home/martin/programming/deskbox/Cura/resources/qml/EngineLog.qml:33
@@ -134,6 +134,7 @@ msgid "Next"
 msgstr "Próximo"
 
 #: /home/martin/programming/deskbox/Cura/resources/qml/AddMachineWizard.qml:66
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:62
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -231,17 +232,31 @@ msgstr "Expert"
 msgid "Display Overhang"
 msgstr "Mostrar Beiral"
 
-#~ msgctxt "ControlWindow|"
-#~ msgid "Extruder Temperature %1"
-#~ msgstr "Temperatura Extrusor %1"
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:26
+#, qt-format
+msgid "Extruder Temperature %1"
+msgstr "Temperatura Extrusor %1"
 
-#~ msgctxt "ControlWindow|"
-#~ msgid "Bed Temperature %1"
-#~ msgstr "Temperatura da Cama %1"
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:31
+#, qt-format
+msgid "Bed Temperature %1"
+msgstr "Temperatura da Cama %1"
 
-#~ msgctxt "ControlWindow|"
-#~ msgid "Print"
-#~ msgstr "Imprimir"
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:55
+msgid "Print"
+msgstr "Imprimir"
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/FirmwareUpdateWindow.qml:37
+msgid "Starting firmware update, this may take a while."
+msgstr "Iniciando atualização de firmware, pode demorar."
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/FirmwareUpdateWindow.qml:42
+msgid "Firmware update completed."
+msgstr "Atualização de firmware completa."
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/FirmwareUpdateWindow.qml:47
+msgid "Updating firmware."
+msgstr "Atualizando firmware."
 
 #~ msgctxt "ControlWindow|"
 #~ msgid "Cancel"
@@ -254,18 +269,6 @@ msgstr "Mostrar Beiral"
 #~ msgctxt "EngineLog|"
 #~ msgid "Close"
 #~ msgstr "Fechar"
-
-#~ msgctxt "FirmwareUpdateWindow|"
-#~ msgid "Starting firmware update, this may take a while."
-#~ msgstr "Iniciando atualização de firmware, pode demorar."
-
-#~ msgctxt "FirmwareUpdateWindow|"
-#~ msgid "Firmware update completed."
-#~ msgstr "Atualização de firmware completa."
-
-#~ msgctxt "FirmwareUpdateWindow|"
-#~ msgid "Updating firmware."
-#~ msgstr "Atualizando firmware."
 
 #~ msgctxt "Sidebar|"
 #~ msgid "Simple"

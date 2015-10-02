@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-02 15:30-0300\n"
+"POT-Creation-Date: 2015-10-02 15:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,6 +138,7 @@ msgid "Next"
 msgstr ""
 
 #: /home/martin/programming/deskbox/Cura/resources/qml/AddMachineWizard.qml:66
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:62
 msgid "Cancel"
 msgstr ""
 
@@ -233,4 +234,30 @@ msgstr ""
 
 #: /home/martin/programming/deskbox/Cura/resources/qml/ViewPage.qml:34
 msgid "Display Overhang"
+msgstr ""
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:26
+#, qt-format
+msgid "Extruder Temperature %1"
+msgstr ""
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:31
+#, qt-format
+msgid "Bed Temperature %1"
+msgstr ""
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/ControlWindow.qml:55
+msgid "Print"
+msgstr ""
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/FirmwareUpdateWindow.qml:37
+msgid "Starting firmware update, this may take a while."
+msgstr ""
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/FirmwareUpdateWindow.qml:42
+msgid "Firmware update completed."
+msgstr ""
+
+#: /home/martin/programming/deskbox/Cura/plugins/USBPrinting/FirmwareUpdateWindow.qml:47
+msgid "Updating firmware."
 msgstr ""

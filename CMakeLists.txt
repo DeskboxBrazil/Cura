@@ -72,5 +72,5 @@ endif()
 # Use this target to regenerate the .pot files
 add_custom_target(
     update_pot
-    COMMAND xgettext -C --qt --keyword=qsTr --keyword=QT_TR_NOOP -o ${CMAKE_CURRENT_SOURCE_DIR}/resources/i18n/cura_qt.pot ${CMAKE_CURRENT_SOURCE_DIR}/resources/qml/*.qml
+    COMMAND xgettext -C --qt --keyword=qsTr --keyword=QT_TR_NOOP -o ${CMAKE_CURRENT_SOURCE_DIR}/resources/i18n/cura_qt.pot ${CMAKE_CURRENT_SOURCE_DIR}/resources/qml/*.qml ${CMAKE_CURRENT_SOURCE_DIR}/plugins/*/*.qml
 )
