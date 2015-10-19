@@ -67,7 +67,7 @@ Rectangle {
             Layout.fillWidth: true;
             Layout.fillHeight: true;
 
-            source: "SidebarAdvanced.qml";
+            source: modesListModel.get(header.currentModeIndex).file;
 
             property Item sidebar: base;
 
@@ -101,14 +101,14 @@ Rectangle {
 
     ListModel {
         id: modesListModel;
-        //: Basic configuration mode option
-        ListElement { text: QT_TR_NOOP("Basic") }
+        //: Simple configuration mode option
+        ListElement { text: QT_TR_NOOP("Basic"); file: "SidebarSimple.qml" }
         //: Intermediate configuration mode option
-        ListElement { text: QT_TR_NOOP("Intermediate") }
+        ListElement { text: QT_TR_NOOP("Intermediate"); file: "SidebarAdvanced.qml" }
         //: Advanced configuration mode option
-        ListElement { text: QT_TR_NOOP("Advanced") }
-        //: Advanced configuration mode option
-        ListElement { text: QT_TR_NOOP("Expert") }
+        ListElement { text: QT_TR_NOOP("Advanced"); file: "SidebarAdvanced.qml" }
+        //: Expert configuration mode option
+        ListElement { text: QT_TR_NOOP("Expert"); file: "SidebarAdvanced.qml" }
     }
 
     Component.onCompleted: {
