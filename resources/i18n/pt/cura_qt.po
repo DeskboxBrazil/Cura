@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Poedit 1.8.3\n"
+"X-Generator: Poedit 1.8.4\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. About dialog title
@@ -347,16 +347,24 @@ msgid "Estimated Print-time"
 msgstr "Tempo Estimado de Impressão"
 
 #. Simple configuration mode option
-#: ../resources/qml/Sidebar.qml:105
 msgctxt "Sidebar|"
-msgid "Simple"
-msgstr "Simples"
+msgid "Basic"
+msgstr "Básico"
+
+#. Intermediate configuration mode option
+msgctxt "Sidebar|"
+msgid "Intermediate"
+msgstr "Intermediário"
 
 #. Advanced configuration mode option
-#: ../resources/qml/Sidebar.qml:107
 msgctxt "Sidebar|"
 msgid "Advanced"
 msgstr "Avançado"
+
+#. Expert configuration mode option
+msgctxt "Sidebar|"
+msgid "Expert"
+msgstr "Expert"
 
 #. Configuration mode label
 #: ../resources/qml/SidebarHeader.qml:26
@@ -431,3 +439,7 @@ msgstr "Visualizar"
 msgctxt "ViewPage|"
 msgid "Display Overhang"
 msgstr "Mostrar Beiral"
+
+#~ msgctxt "Sidebar|"
+#~ msgid "Simple"
+#~ msgstr "Simples"
