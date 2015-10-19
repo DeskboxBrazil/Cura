@@ -102,9 +102,13 @@ Rectangle {
     ListModel {
         id: modesListModel;
         //: Simple configuration mode option
-        ListElement { text: QT_TR_NOOP("Simple"); file: "SidebarSimple.qml" }
+        ListElement { text: QT_TR_NOOP("Basic"); file: "SidebarSimple.qml" }
+        //: Intermediate configuration mode option
+        ListElement { text: QT_TR_NOOP("Intermediate"); file: "SidebarAdvanced.qml" }
         //: Advanced configuration mode option
         ListElement { text: QT_TR_NOOP("Advanced"); file: "SidebarAdvanced.qml" }
+        //: Expert configuration mode option
+        ListElement { text: QT_TR_NOOP("Expert"); file: "SidebarAdvanced.qml" }
     }
 
     Component.onCompleted: {
