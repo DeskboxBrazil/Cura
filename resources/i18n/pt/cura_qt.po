@@ -1,38 +1,37 @@
 msgid ""
 msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Qt-Contexts: true\n"
 "Project-Id-Version: Cura\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Elsner Ramos <martin.elsner@gmail.com>\n"
 "Language-Team: \n"
-"Language: pt_BR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Qt-Contexts: true\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
 
 #. About dialog title
 #: ../resources/qml/AboutDialog.qml:12
 msgctxt "AboutDialog|"
 msgid "About Cura"
-msgstr "Sobre o Deskbox"
+msgstr "Sobre o Software"
 
 #. About dialog application description
 #: ../resources/qml/AboutDialog.qml:42
 msgctxt "AboutDialog|"
 msgid "End-to-end solution for fused filament 3D printing."
-msgstr ""
-"Solução para impressão 3D FDM,\n"
-"baseado no software open source Cura."
+msgstr "Solução completa para impressão 3D FDM."
 
-# Deixado em branco intencionalmente.
 #. About dialog application author note
 #: ../resources/qml/AboutDialog.qml:47
 msgctxt "AboutDialog|"
 msgid "Cura has been developed by Ultimaker B.V. in cooperation with the community."
-msgstr " "
+msgstr ""
+"Software desenvolvido por Ultimaker B.V. em cooperação com a comunidade.\n"
+"Adaptado por Deskbox Brasil."
 
 #. Close about dialog button
 #: ../resources/qml/AboutDialog.qml:58
@@ -92,13 +91,13 @@ msgstr "Reportar um &Bug"
 #: ../resources/qml/Actions.qml:96
 msgctxt "Actions|"
 msgid "&About..."
-msgstr "&Acerca de..."
+msgstr "&Sobre..."
 
 #. Delete selection action
 #: ../resources/qml/Actions.qml:103
 msgctxt "Actions|"
 msgid "Delete Selection"
-msgstr "Exluir Seleção"
+msgstr "Excluir Seleção"
 
 #. Delete object action
 #: ../resources/qml/Actions.qml:111
@@ -122,13 +121,13 @@ msgstr "Duplicar Objeto"
 #: ../resources/qml/Actions.qml:130
 msgctxt "Actions|"
 msgid "Split Object into Parts"
-msgstr "Dividir um Objeto em Partes"
+msgstr "Dividir Objeto em Partes"
 
 #. Clear build platform action
 #: ../resources/qml/Actions.qml:137
 msgctxt "Actions|"
 msgid "Clear Build Platform"
-msgstr "Desobstruir Plataforma de Construção"
+msgstr "Limpar plataforma"
 
 #. Reload all objects action
 #: ../resources/qml/Actions.qml:144
@@ -146,7 +145,7 @@ msgstr "Redefinir Posições de Todos os Objetos"
 #: ../resources/qml/Actions.qml:156
 msgctxt "Actions|"
 msgid "Reset All Object Transformations"
-msgstr "Redefinir Todas as Transformações de Objetos "
+msgstr "Redefinir Todas as Transformações de Objetos"
 
 #. Open file action
 #: ../resources/qml/Actions.qml:162
@@ -164,7 +163,7 @@ msgstr "&Salvar..."
 #: ../resources/qml/Actions.qml:178
 msgctxt "Actions|"
 msgid "Show engine &log..."
-msgstr "Mostrar &registro da engine…"
+msgstr "Mostrar &registros…"
 
 #. Add Printer dialog title
 #. ----------
@@ -211,7 +210,7 @@ msgstr "Temperatura Extrusor %1"
 #, qt-format
 msgctxt "ControlWindow|"
 msgid "Bed Temperature %1"
-msgstr "Temperatura da Cama %1"
+msgstr "Temperatura da Mesa %1"
 
 #. USB Printing dialog start print button
 #: ../plugins/USBPrinting/ControlWindow.qml:33
@@ -229,7 +228,7 @@ msgstr "Cancelar"
 #: ../resources/qml/Cura.qml:14
 msgctxt "Cura|"
 msgid "Cura"
-msgstr "Deskbox"
+msgstr "Software"
 
 #. File menu
 #: ../resources/qml/Cura.qml:26
@@ -307,7 +306,7 @@ msgstr "Fechar"
 #: ../plugins/USBPrinting/FirmwareUpdateWindow.qml:16
 msgctxt "FirmwareUpdateWindow|"
 msgid "Starting firmware update, this may take a while."
-msgstr "Iniciando atualização de firmware, pode demorar."
+msgstr "Iniciando atualização de firmware."
 
 #. Firmware update status label
 #: ../plugins/USBPrinting/FirmwareUpdateWindow.qml:21
@@ -347,24 +346,16 @@ msgid "Estimated Print-time"
 msgstr "Tempo Estimado de Impressão"
 
 #. Simple configuration mode option
+#: ../resources/qml/Sidebar.qml:105
 msgctxt "Sidebar|"
-msgid "Basic"
-msgstr "Básico"
-
-#. Intermediate configuration mode option
-msgctxt "Sidebar|"
-msgid "Intermediate"
-msgstr "Intermediário"
+msgid "Simple"
+msgstr "Simples"
 
 #. Advanced configuration mode option
+#: ../resources/qml/Sidebar.qml:107
 msgctxt "Sidebar|"
 msgid "Advanced"
 msgstr "Avançado"
-
-#. Expert configuration mode option
-msgctxt "Sidebar|"
-msgid "Expert"
-msgstr "Expert"
 
 #. Configuration mode label
 #: ../resources/qml/SidebarHeader.qml:26
@@ -439,7 +430,3 @@ msgstr "Visualizar"
 msgctxt "ViewPage|"
 msgid "Display Overhang"
 msgstr "Mostrar Beiral"
-
-#~ msgctxt "Sidebar|"
-#~ msgid "Simple"
-#~ msgstr "Simples"
