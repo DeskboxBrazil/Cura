@@ -3,6 +3,7 @@
     "name": "Deskbox Multi",
     "icon": "icon_deskbox.png",
     "platform": "deskbox_platform.stl",
+    "platform_texture": "deskbox_backplate.png",
 
     "inherits": "fdmprinter.json",
 
