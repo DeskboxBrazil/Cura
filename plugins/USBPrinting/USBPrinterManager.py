@@ -150,10 +150,10 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             firmware_name += "-%d" % (baudrate)
         elif machine_type == "ultimaker_original_plus":
             firmware_name = "MarlinUltimaker-UMOP-%d" % (baudrate)
-        elif machine_type == "Witbox":
-            return "MarlinWitbox.hex"
-        elif machine_type == "ultimaker2go":
-            return "MarlinUltimaker2go.hex"
+        elif machine_type == "deskbox_multi":
+            return "MarlinDeskboxMulti.hex"
+        elif machine_type == "deskbox_mega":
+            return "MarlinDeskboxMega.hex"
         elif machine_type == "ultimaker2extended":
             return "MarlinUltimaker2extended.hex"
         elif machine_type == "ultimaker2":
