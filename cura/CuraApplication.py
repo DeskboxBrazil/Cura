@@ -80,7 +80,7 @@ class CuraApplication(QtApplication):
         self.getController().getScene().sceneChanged.connect(self.updatePlatformActivity)
 
         Preferences.getInstance().addPreference("cura/active_machine", "")
-        Preferences.getInstance().addPreference("cura/active_mode", "simple")
+        Preferences.getInstance().addPreference("cura/active_mode", "0")
         Preferences.getInstance().addPreference("cura/recent_files", "")
         Preferences.getInstance().addPreference("cura/categories_expanded", "")
 
@@ -93,7 +93,7 @@ class CuraApplication(QtApplication):
                 continue
 
             self._recent_files.append(QUrl.fromLocalFile(f))
-    
+
     ##  Handle loading of all plugin types (and the backend explicitly)
     #   \sa PluginRegistery
     def _loadPlugins(self):
@@ -265,7 +265,7 @@ class CuraApplication(QtApplication):
                 new_node.setSelectable(True)
                 op.addOperation(AddSceneNodeOperation(new_node, node.getParent()))
             op.push()
-    
+
     ##  Center object on platform.
     @pyqtSlot("quint64")
     def centerObject(self, object_id):
@@ -277,7 +277,7 @@ class CuraApplication(QtApplication):
         if node:
             op = SetTransformOperation(node, Vector())
             op.push()
-    
+
     ##  Delete all mesh data on the scene.
     @pyqtSlot()
     def deleteAll(self):
@@ -294,7 +294,7 @@ class CuraApplication(QtApplication):
 
             op.push()
 
-    ## Reset all translation on nodes with mesh data. 
+    ## Reset all translation on nodes with mesh data.
     @pyqtSlot()
     def resetAllTranslation(self):
         nodes = []
@@ -310,8 +310,8 @@ class CuraApplication(QtApplication):
                 op.addOperation(SetTransformOperation(node, Vector()))
 
             op.push()
-    
-    ## Reset all transformations on nodes with mesh data. 
+
+    ## Reset all transformations on nodes with mesh data.
     @pyqtSlot()
     def resetAll(self):
         nodes = []
@@ -327,7 +327,7 @@ class CuraApplication(QtApplication):
                 op.addOperation(SetTransformOperation(node, Vector(), Quaternion(), Vector(1, 1, 1)))
 
             op.push()
-            
+
     ##  Reload all mesh data on the screen from file.
     @pyqtSlot()
     def reloadAll(self):
@@ -351,7 +351,7 @@ class CuraApplication(QtApplication):
                 job._node = node
                 job.finished.connect(self._reloadMeshFinished)
                 job.start()
-    
+
     ##  Get logging data of the backend engine
     #   \returns \type{string} Logging data
     @pyqtSlot(result=str)
@@ -383,7 +383,7 @@ class CuraApplication(QtApplication):
         return Preferences.getInstance().getValue("cura/categories_expanded").split(";")
 
     outputDevicesChanged = pyqtSignal()
-    
+
     @pyqtProperty("QVariantMap", notify = outputDevicesChanged)
     def outputDevices(self):
         return self._output_devices
@@ -398,7 +398,7 @@ class CuraApplication(QtApplication):
             return None
 
         return self.getActiveMachine().getSettingValueByKey(key)
-    
+
     ##  Change setting by key value pair
     @pyqtSlot(str, "QVariant")
     def setSettingValue(self, key, value):
@@ -419,7 +419,7 @@ class CuraApplication(QtApplication):
     def addOutputDevice(self, id, device):
         self._output_devices[id] = device
         self.outputDevicesChanged.emit()
-    
+
     ##  Remove output device
     #   \param id \type{string} The identifier used to identify the device.
     #   \sa PrinterApplication::addOutputDevice()
@@ -433,7 +433,7 @@ class CuraApplication(QtApplication):
         self._output_devices[device]["function"](device)
 
     writeToLocalFileRequested = pyqtSignal()
-    
+
     def _writeToLocalFile(self, device):
         self.writeToLocalFileRequested.emit()
 
@@ -447,7 +447,7 @@ class CuraApplication(QtApplication):
             except KeyError:
                 Logger.log("e", "Tried to write to unknown SD card %s", device)
                 return
-    
+
             filename = os.path.join(path, node.getName()[0:node.getName().rfind(".")] + ".gcode")
 
             message = Message(self._output_devices[device]["description"], 0, False, -1)

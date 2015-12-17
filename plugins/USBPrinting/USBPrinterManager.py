@@ -34,26 +34,26 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
         self._check_ports_thread = threading.Thread(target = self._updateConnectionList)
         self._check_ports_thread.daemon = True
         self._check_ports_thread.start()
-        
+
         self._progress = 0
 
         self._control_view = None
         self._firmware_view = None
         self._extruder_temp = 0
         self._bed_temp = 0
-        self._error_message = "" 
-        
+        self._error_message = ""
+
         ## Add menu item to top menu of the application.
         self.setMenuName("Firmware")
         self.addMenuItem(i18n_catalog.i18n("Update Firmware"), self.updateAllFirmware)
 
         Application.getInstance().applicationShuttingDown.connect(self._onApplicationShuttingDown)
-    
+
     pyqtError = pyqtSignal(str, arguments = ["error"])
     processingProgress = pyqtSignal(float, arguments = ["amount"])
     pyqtExtruderTemperature = pyqtSignal(float, arguments = ["amount"])
     pyqtBedTemperature = pyqtSignal(float, arguments = ["amount"])
-    
+
     ##  Show firmware interface.
     #   This will create the view if its not already created.
     def spawnFirmwareInterface(self, serial_port):
@@ -66,7 +66,7 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             self._firmware_view = component.create(self._firmware_context)
 
         self._firmware_view.show()
-        
+
     ##  Show control interface.
     #   This will create the view if its not already created.
     def spawnControlInterface(self,serial_port):
@@ -96,12 +96,12 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
     @pyqtProperty(str,notify = pyqtError)
     def error(self):
         return self._error_message
-    
+
     ##  Check all serial ports and create a PrinterConnection object for them.
     #   Note that this does not validate if the serial ports are actually usable!
     #   This (the validation) is only done when the connect function is called.
-    def _updateConnectionList(self):  
-        while True: 
+    def _updateConnectionList(self):
+        while True:
             temp_serial_port_list = self.getSerialPortList(only_list_usb = True)
             if temp_serial_port_list != self._serial_port_list: # Something changed about the list since we last changed something.
                 disconnected_ports = [port for port in self._serial_port_list if port not in temp_serial_port_list ]
@@ -117,14 +117,14 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
                             connection.onBedTemperatureChange.connect(self.onBedTemperature)
                             connection.onError.connect(self.onError)
                             self._printer_connections.append(connection)
-                
+
                 for serial_port in disconnected_ports: # Close connections and remove them from list.
                     connection = self.getConnectionByPort(serial_port)
                     if connection != None:
                         self._printer_connections.remove(connection)
                         connection.close()
             time.sleep(5) # Throttle, as we don"t need this information to be updated every single second.
-    
+
     def updateAllFirmware(self):
         self.spawnFirmwareInterface("")
         for printer_connection in self._printer_connections:
@@ -132,64 +132,41 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
                 printer_connection.updateFirmware(Resources.getPath(Resources.FirmwareLocation, self._getDefaultFirmwareName()))
             except FileNotFoundError:
                 continue
-            
+
     def updateFirmwareBySerial(self, serial_port):
         printer_connection = self.getConnectionByPort(serial_port)
         if printer_connection is not None:
             self.spawnFirmwareInterface(printer_connection.getSerialPort())
             printer_connection.updateFirmware(Resources.getPath(Resources.FirmwareLocation, self._getDefaultFirmwareName()))
-        
+
     def _getDefaultFirmwareName(self):
-        machine_type = Application.getInstance().getActiveMachine().getTypeID()
-        firmware_name = ""
-        baudrate = 250000
-        if sys.platform.startswith("linux"):
-                baudrate = 115200
-        if machine_type == "ultimaker_original":
-            firmware_name = "MarlinUltimaker"
-            firmware_name += "-%d" % (baudrate)
-        elif machine_type == "ultimaker_original_plus":
-            firmware_name = "MarlinUltimaker-UMOP-%d" % (baudrate)
-        elif machine_type == "deskbox_multi":
-            return "MarlinDeskboxMulti.hex"
-        elif machine_type == "deskbox_mega":
-            return "MarlinDeskboxMega.hex"
-        elif machine_type == "ultimaker2extended":
-            return "MarlinUltimaker2extended.hex"
-        elif machine_type == "ultimaker2":
-            return "MarlinUltimaker2.hex"
+        return "MarlinDeskbox.hex"
 
-        ##TODO: Add check for multiple extruders
-        
-        if firmware_name != "":
-            firmware_name += ".hex"
-        return firmware_name
-
-    ##  Callback for extruder temperature change  
+    ##  Callback for extruder temperature change
     def onExtruderTemperature(self, serial_port, index, temperature):
         self._extruder_temp = temperature
         self.pyqtExtruderTemperature.emit(temperature)
-    
-    ##  Callback for bed temperature change    
+
+    ##  Callback for bed temperature change
     def onBedTemperature(self, serial_port,temperature):
         self._bed_temp = temperature
         self.pyqtBedTemperature.emit(temperature)
-    
+
     ##  Callback for error
     def onError(self, error):
         self._error_message = error if type(error) is str else error.decode("utf-8")
         self.pyqtError.emit(self._error_message)
-        
+
     ##  Callback for progress change
     def onProgress(self, progress, serial_port):
         self._progress = progress
         self.processingProgress.emit(progress)
 
-    ##  Attempt to connect with all possible connections. 
+    ##  Attempt to connect with all possible connections.
     def connectAllConnections(self):
         for connection in self._printer_connections:
             connection.connect()
-    
+
     ##  Send gcode to printer and start printing
     def sendGCodeByPort(self, serial_port, gcode_list):
         printer_connection = self.getConnectionByPort(serial_port)
@@ -197,12 +174,12 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             printer_connection.printGCode(gcode_list)
             return True
         return False
-    
+
     @pyqtSlot()
     def cancelPrint(self):
         for printer_connection in self.getActiveConnections():
             printer_connection.cancelPrint()
-    
+
     ##  Send gcode to all active printers.
     #   \return True if there was at least one active connection.
     def sendGCodeToAllActive(self, gcode_list):
@@ -212,7 +189,7 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             return True
         else:
             return False
-    
+
     ##  Send a command to a printer indentified by port
     #   \param serial port String indentifieing the port
     #   \param command String with the g-code command to send.
@@ -223,7 +200,7 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             printer_connection.sendCommand(command)
             return True
         return False
-    
+
     ##  Send a command to all active (eg; connected) printers
     #   \param command String with the g-code command to send.
     #   \return True if at least one connection was found, false otherwise
@@ -232,9 +209,9 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             printer_connection.sendCommand(command)
         if len(self.getActiveConnections()):
             return True
-        else: 
+        else:
             return False
-    
+
     ##  Callback if the connection state of a connection is changed.
     #   This adds or removes the connection as a possible output device.
     def serialConectionStateCallback(self, serial_port):
@@ -250,8 +227,8 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             })
         else:
             Application.getInstance().removeOutputDevice(serial_port)
-    
-    @pyqtSlot()        
+
+    @pyqtSlot()
     def startPrint(self):
         gcode_list = getattr(Application.getInstance().getController().getScene(), "gcode_list", None)
         if gcode_list:
@@ -259,11 +236,11 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             for gcode in gcode_list:
                 final_list += gcode.split("\n")
             self.sendGCodeToAllActive(gcode_list)
-    
+
     ##  Get a list of printer connection objects that are connected.
     def getActiveConnections(self):
         return [connection for connection in self._printer_connections if connection.isConnected()]
-    
+
     ##  Get a printer connection object by serial port
     def getConnectionByPort(self, serial_port):
         for printer_connection in self._printer_connections:
