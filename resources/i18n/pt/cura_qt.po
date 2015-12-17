@@ -343,7 +343,7 @@ msgstr "Calculando tempo de impressão"
 #: ../resources/qml/SaveButton.qml:197
 msgctxt "SaveButton|"
 msgid "Estimated Print-time"
-msgstr "Tempo Estimado de Impressão"
+msgstr "Tempo de Impressão"
 
 #. Simple configuration mode option
 msgctxt "Sidebar|"

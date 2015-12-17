@@ -8,9 +8,9 @@
     "inherits": "fdmprinter.json",
 
     "machine_settings": {
-        "machine_width": { "default": 205 },
+        "machine_width": { "default": 210 },
         "machine_height": { "default": 200 },
-        "machine_depth": { "default": 205 },
+        "machine_depth": { "default": 210 },
         "machine_center_is_zero": { "default": false },
         "machine_nozzle_size": { "default": 0.4 },
         "machine_head_shape_min_x": { "default": 38 },
