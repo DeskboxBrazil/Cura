@@ -244,7 +244,7 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
                 "id": serial_port,
                 "function": self.spawnControlInterface,
                 "description": "Print with USB {0}".format(serial_port),
-                "shortDescription": "Print with USB",
+                "shortDescription": "Imprimir com USB",
                 "icon": "save",
                 "priority": 1
             })

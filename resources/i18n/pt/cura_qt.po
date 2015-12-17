@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Martin Elsner Ramos <martin.elsner@gmail.com>\n"
+"Last-Translator: Martin Elsner Ramos <martin.elsner@gmail.com>, Leandro Veiga Michalczuk <leandrovamk@gmail.com>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -346,16 +346,24 @@ msgid "Estimated Print-time"
 msgstr "Tempo Estimado de Impressão"
 
 #. Simple configuration mode option
-#: ../resources/qml/Sidebar.qml:105
 msgctxt "Sidebar|"
-msgid "Simple"
+msgid "Basic"
 msgstr "Simples"
 
+#. Intermediate configuration mode option
+msgctxt "Sidebar|"
+msgid "Intermediate"
+msgstr "Intermediário"
+
 #. Advanced configuration mode option
-#: ../resources/qml/Sidebar.qml:107
 msgctxt "Sidebar|"
 msgid "Advanced"
 msgstr "Avançado"
+
+#. Expert configuration mode option
+msgctxt "Sidebar|"
+msgid "Expert"
+msgstr "Expert"
 
 #. Configuration mode label
 #: ../resources/qml/SidebarHeader.qml:26
