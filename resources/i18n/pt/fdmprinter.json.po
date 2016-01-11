@@ -342,13 +342,11 @@ msgstr ""
 "pré-aquecimento. Para o PLA um valor de 210 graus costuma ser utilizado."
 
 #: fdmprinter.json
-#, fuzzy
 msgctxt "material_bed_temperature label"
 msgid "Bed Temperature"
 msgstr "Temperatura da Mesa"
 
 #: fdmprinter.json
-#, fuzzy
 msgctxt "material_bed_temperature description"
 msgid ""
 "The temperature used for the heated printer bed. Set at 0 to pre-heat it "

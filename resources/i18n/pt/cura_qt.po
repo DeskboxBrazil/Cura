@@ -346,24 +346,16 @@ msgid "Estimated Print-time"
 msgstr "Tempo de Impressão"
 
 #. Simple configuration mode option
+#: ../resources/qml/Sidebar.qml:105
 msgctxt "Sidebar|"
-msgid "Basic"
+msgid "Simple"
 msgstr "Simples"
 
-#. Intermediate configuration mode option
-msgctxt "Sidebar|"
-msgid "Intermediate"
-msgstr "Intermediário"
-
 #. Advanced configuration mode option
+#: ../resources/qml/Sidebar.qml:107
 msgctxt "Sidebar|"
 msgid "Advanced"
 msgstr "Avançado"
-
-#. Expert configuration mode option
-msgctxt "Sidebar|"
-msgid "Expert"
-msgstr "Expert"
 
 #. Configuration mode label
 #: ../resources/qml/SidebarHeader.qml:26
