@@ -1,4 +1,4 @@
-set(CMAKE_LEGACY_CYGWIN_WIN32 0)
+set(CMAKE_LEGACY_CYGWIN_WIN32 1)
 
 project(cura)
 cmake_minimum_required(VERSION 2.8.12)
