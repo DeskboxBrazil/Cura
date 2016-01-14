@@ -14,7 +14,11 @@ This is the source code of Cura.
 
 ## Testing and Debugging
 
-If you need to reset all settings to start fresh, remove the following directories (on Linux):
+If you need to reset all settings to start testing fresh, remove the following directories:
 
+### Linux
 * `~/.config/cura`
 * `~/.local/share/cura`
+
+### OS X
+* `~/.cura`

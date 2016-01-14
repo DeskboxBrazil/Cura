@@ -252,7 +252,7 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
     #   \param only_list_usb If true, only usb ports are listed
     def getSerialPortList(self,only_list_usb=False):
         base_list = []
-        if platform.system() == "Windows":
+        if platform.system() == "Windows" or platform.system().startswith('CYGWIN'):
             import winreg
             try:
                 key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE,"HARDWARE\\DEVICEMAP\\SERIALCOMM")
