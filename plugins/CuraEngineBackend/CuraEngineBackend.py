@@ -29,7 +29,7 @@ class CuraEngineBackend(Backend):
         default_engine_location = os.path.join(Application.getInstallPrefix(), "bin", "CuraEngine")
         if hasattr(sys, "frozen"):
             default_engine_location = os.path.join(os.path.dirname(os.path.abspath(sys.executable)), "CuraEngine")
-        if sys.platform == "win32":
+        if sys.platform == "win32" or sys.platform == 'cygwin':
             default_engine_location += ".exe"
         default_engine_location = os.path.abspath(default_engine_location)
         Preferences.getInstance().addPreference("backend/location", default_engine_location)
@@ -155,7 +155,7 @@ class CuraEngineBackend(Backend):
 
             obj = msg.objects.add()
             obj.id = id(object)
-            
+
             verts = numpy.array(mesh_data.getVertices())
             verts[:,[1,2]] = verts[:,[2,1]]
             verts[:,1] *= -1
@@ -222,7 +222,7 @@ class CuraEngineBackend(Backend):
 
     def _createSocket(self):
         super()._createSocket()
-        
+
         self._socket.registerMessageType(1, Cura_pb2.ObjectList)
         self._socket.registerMessageType(2, Cura_pb2.SlicedObjectList)
         self._socket.registerMessageType(3, Cura_pb2.Progress)
