@@ -17,7 +17,7 @@ if(NOT ${URANIUM_SCRIPTS_DIR} STREQUAL "")
         # translations target will convert .po files into .mo and .qm as needed.
         # The files are checked for a _qt suffix and if it is found, converted to
         # qm, otherwise they are converted to .po.
-        add_custom_target(translations)
+        add_custom_target(translations ALL)
         # copy-translations can be used to copy the built translation files from the
         # build directory to the source resources directory. This is mostly a convenience
         # during development, normally you want to simply use the install target to install
