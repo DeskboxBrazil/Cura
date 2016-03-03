@@ -5,10 +5,9 @@
 
 try:
     import cura.CuraApplication
-
     app = cura.CuraApplication.CuraApplication.getInstance()
     app.run()
 except Exception as e:
-    raise
+    # raise
     import cura.CrashHandler
     cura.CrashHandler.show()
