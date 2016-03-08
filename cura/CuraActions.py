@@ -20,7 +20,7 @@ class CuraActions(QObject):
 
     @pyqtSlot()
     def openBugReportPage(self):
-        event = CallFunctionEvent(self._openUrl, [QUrl("http://github.com/Ultimaker/Cura/issues")], {})
+        event = CallFunctionEvent(self._openUrl, [QUrl("https://github.com/DeskboxBrazil/Cura/issues")], {})
         Application.getInstance().functionEvent(event)
 
     def _openUrl(self, url):

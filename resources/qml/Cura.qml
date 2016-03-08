@@ -135,7 +135,7 @@ UM.MainWindow {
                 title: qsTr("&Help");
 
                 MenuItem { action: actions.showEngineLog; }
-                MenuItem { action: actions.documentation; }
+                // MenuItem { action: actions.documentation; } // Hide this until we have the Deskbox manual online.
                 MenuItem { action: actions.reportBug; }
                 MenuSeparator { }
                 MenuItem { action: actions.about; }
