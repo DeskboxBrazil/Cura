@@ -4,6 +4,10 @@
 # Cura is released under the terms of the AGPLv3 or higher.
 
 try:
+    # When running in py2exe, disable the log feature by routing stdout/sterr to a different log.
+    import sys
+    if hasattr(sys, 'frozen'):
+    	sys.stdout = sys.stderr = open("Cura.output.log", "w")
     import cura.CuraApplication
     app = cura.CuraApplication.CuraApplication.getInstance()
     app.run()

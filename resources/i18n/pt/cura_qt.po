@@ -63,6 +63,11 @@ msgctxt "Actions|"
 msgid "&Preferences..."
 msgstr "&Preferências..."
 
+#. Preferences action
+msgctxt "QMenuBar"
+msgid "&Preferences..."
+msgstr "&Preferências..."
+
 #. Add Printer action
 #: ../resources/qml/Actions.qml:68
 msgctxt "Actions|"
