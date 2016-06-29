@@ -22,3 +22,17 @@ If you need to reset all settings to start testing fresh, remove the following d
 
 ### OS X
 * `~/.cura`
+
+
+## Development
+
+1. Start the development VM.
+```shell
+vagrant up
+```  
+2. Login to the VM with user `vagrant`, password `vagrant`.
+3. Open a console/terminal window and run:
+```shell
+cd /deskbox/Cura
+python3 cura_app.py
+```
