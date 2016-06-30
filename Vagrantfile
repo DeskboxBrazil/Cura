@@ -74,6 +74,6 @@ Vagrant.configure(2) do |config|
   # SHELL
 
   # Provisioning
-  config.vm.provision "shell", privileged: false, path: "provision.sh"
+  config.vm.provision "shell", privileged: false, path: "setup-development-server"
 
 end

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Run this script as yourself, not as root.
+
+set -e
+
+if [ "$(whoami)" = 'root' ]; then
+    echo 'Run this as yourself, not as root.'
+    exit 1
+fi
+
+sudo apt-get update
+
+# Dev tools
+sudo apt-get install --yes build-essential python3 python-pip
+# Reference docs
+sudo apt-get install --yes python3-doc
+
+echo 'Creating virtualenv...'
+
+# Ensure wheels is not OS owned, or it will not be upgraded.
+sudo apt-get remove --purge --yes python-wheel
+
+# Use the latest versions, so we can leverage
+# the power of the wheels cache.
+sudo pip install --upgrade pip
+sudo pip install --upgrade virtualenv
+sudo pip install --upgrade setuptools
+sudo pip install --upgrade wheel
+
+# Virtualenv (for IDE autocomplete)
+rm -rf ~/.virtualenvs/cura
+mkdir -p ~/.virtualenvs
+virtualenv --python=python3 ~/.virtualenvs/cura
+
+# Install packages used by Cura
+~/.virtualenvs/cura/bin/pip install -r requirements.txt
+

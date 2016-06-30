@@ -140,7 +140,7 @@ class USBPrinterManager(QObject, SignalEmitter, Extension):
             printer_connection.updateFirmware(Resources.getPath(Resources.FirmwareLocation, self._getDefaultFirmwareName()))
 
     def _getDefaultFirmwareName(self):
-        return "MarlinDeskbox.hex"
+        return "MarlinDeskbox-{language}.hex".format(language=Application.getInstance()._i18n_catalog._getDefaultLanguage())
 
     ##  Callback for extruder temperature change
     def onExtruderTemperature(self, serial_port, index, temperature):
