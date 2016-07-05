@@ -396,7 +396,7 @@ msgstr "Calculando..."
 #: ../resources/qml/SidebarSimple.qml:50
 msgctxt "SidebarSimple|"
 msgid "Estimated Print Time"
-msgstr "Tempo Estimado de Impressão"
+msgstr "T. Est. de Impressão"
 
 #. Quality slider label
 #: ../resources/qml/SidebarSimple.qml:87

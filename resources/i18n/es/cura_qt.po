@@ -391,7 +391,7 @@ msgstr "Calculando..."
 #: ../resources/qml/SidebarSimple.qml:50
 msgctxt "SidebarSimple|"
 msgid "Estimated Print Time"
-msgstr "Duración Estimada de la Impresión"
+msgstr "Dur. Est. Impresión"
 
 # a small doubt on the word "calado
 # "...
