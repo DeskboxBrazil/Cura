@@ -14,7 +14,7 @@ def show():
 
     label = QLabel(dialog)
     layout.addWidget(label)
-    label.setText("<p>An uncaught exception has occurred!</p><p>Please use the information below to post a bug report at <a href=\"http://github.com/Ultimaker/Cura/issues\">http://github.com/Ultimaker/Cura/issues</a></p>")
+    label.setText("<p>An uncaught exception has occurred!</p><p>Please use the information below to post a bug report at <a href=\"http://github.com/DeskboxBrazil/Cura/issues\">http://github.com/DeskboxBrazil/Cura/issues</a></p>")
 
     textarea = QTextEdit(dialog)
     layout.addWidget(textarea)
@@ -36,6 +36,6 @@ def show():
     layout.addWidget(buttons)
     buttons.addButton("Open Web Page", QDialogButtonBox.HelpRole)
     buttons.rejected.connect(lambda: dialog.close())
-    buttons.helpRequested.connect(lambda: webbrowser.open("http://github.com/Ultimaker/Cura/issues"))
+    buttons.helpRequested.connect(lambda: webbrowser.open("http://github.com/DeskboxBrazil/Cura/issues"))
 
     dialog.exec_()

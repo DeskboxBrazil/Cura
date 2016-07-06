@@ -330,7 +330,7 @@ msgstr "Atualizando firmware."
 #, qt-format
 msgctxt "SaveButton|"
 msgid "%1m material"
-msgstr "material %1m"
+msgstr "%1m de material"
 
 #. Save button label
 #: ../resources/qml/SaveButton.qml:191
@@ -348,7 +348,7 @@ msgstr "Calculando tempo de impressão"
 #: ../resources/qml/SaveButton.qml:197
 msgctxt "SaveButton|"
 msgid "Estimated Print-time"
-msgstr "Tempo de Impressão"
+msgstr "Tempo Estimado"
 
 #. Simple configuration mode option
 #: ../resources/qml/Sidebar.qml:105
@@ -396,7 +396,7 @@ msgstr "Calculando..."
 #: ../resources/qml/SidebarSimple.qml:50
 msgctxt "SidebarSimple|"
 msgid "Estimated Print Time"
-msgstr "T. Est. de Impressão"
+msgstr "Tempo Estimado"
 
 #. Quality slider label
 #: ../resources/qml/SidebarSimple.qml:87
